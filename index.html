@@ -1,110 +1,678 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>StartScale — Learn it. Build it. Scale it.</title>
-<meta name="description" content="Beginner-friendly how-to guides, digital templates, and online services from StartScale.">
-<style>
-:root{--ink:#101114;--muted:#666a73;--bg:#f7f7f5;--card:#fff;--line:#e7e7e3;--accent:#111;--soft:#ecece7}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
-a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
-nav{height:76px;background:rgba(247,247,245,.92);backdrop-filter:blur(12px);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10;border-bottom:1px solid var(--line)}
-.logo{font-weight:850;font-size:22px;letter-spacing:-.7px}.logo span{font-weight:450}.navlinks{display:flex;gap:28px;font-size:14px;color:#444}.navlinks a:hover{text-decoration:underline}.navbtn{padding:10px 17px;border-radius:999px;background:#111;color:#fff;font-weight:700;font-size:14px}
-.hero{padding:100px 0 80px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:800;color:#70736d;margin-bottom:18px}
-h1{font-size:clamp(48px,7vw,84px);line-height:.98;letter-spacing:-4px;max-width:850px;margin:0 0 26px}h2{font-size:42px;line-height:1.05;letter-spacing:-2px;margin:0 0 16px}h3{margin:0 0 8px;font-size:19px}
-.hero p{font-size:19px;color:var(--muted);max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 21px;border-radius:12px;background:#111;color:#fff;font-weight:750;border:1px solid #111}.btn.secondary{background:transparent;color:#111;border-color:#cfcfca}
-.section{padding:82px 0}.sectionhead{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}.sectionhead p{max-width:480px;color:var(--muted);margin:0}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:25px;box-shadow:0 4px 18px rgba(0,0,0,.025)}.tag{display:inline-block;background:var(--soft);border-radius:999px;padding:5px 10px;font-size:11px;font-weight:800;margin-bottom:22px}.card p{color:var(--muted);font-size:14px}.price{font-size:23px;font-weight:850;margin-top:18px}.learn{font-size:13px;font-weight:800;margin-top:20px;display:inline-block}
-.hero-card{background:#111;color:#fff;border-radius:28px;padding:48px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px}.hero-card p{color:#c7c7c4}.mini-list{display:grid;gap:10px}.mini{padding:13px 15px;border:1px solid #343434;border-radius:12px;font-size:13px}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{border-top:2px solid #111;padding-top:18px}.num{font-size:12px;font-weight:900;color:#777;margin-bottom:14px}
-.cta{background:#e9e9e4;border-radius:28px;padding:55px;text-align:center}.cta p{max-width:600px;margin:0 auto;color:var(--muted)}
-footer{padding:40px 0;border-top:1px solid var(--line);color:#777;font-size:13px;display:flex;justify-content:space-between;gap:20px}
-@media(max-width:800px){.navlinks{display:none}.hero{padding-top:65px}h1{letter-spacing:-2.5px}.grid,.steps{grid-template-columns:1fr}.hero-card{grid-template-columns:1fr;padding:32px}.sectionhead{display:block}.sectionhead p{margin-top:12px}.cta{padding:36px 24px}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StartScale — Learn. Build. Scale.</title>
+
+  <meta
+    name="description"
+    content="StartScale helps beginners learn how to build online through practical guides, templates, digital products, and services."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,247,245,0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-inner {
+      max-width: 1150px;
+      margin: auto;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 800;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      opacity: .55;
+    }
+
+    .hero {
+      max-width: 1150px;
+      margin: auto;
+      padding: 110px 24px 100px;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 8vw, 100px);
+      line-height: .92;
+      letter-spacing: -6px;
+      margin-bottom: 30px;
+    }
+
+    .hero-text {
+      font-size: 20px;
+      color: #666;
+      max-width: 650px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 16px 25px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid #111;
+      transition: .2s;
+    }
+
+    .button-dark {
+      background: #111;
+      color: white;
+    }
+
+    .button-light {
+      background: white;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .hero-card {
+      background: #111;
+      color: white;
+      border-radius: 28px;
+      padding: 40px;
+      min-height: 390px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .hero-card small {
+      color: #aaa;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero-card h2 {
+      font-size: 38px;
+      line-height: 1;
+      letter-spacing: -2px;
+    }
+
+    .hero-card p {
+      color: #bbb;
+    }
+
+    section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 85px 24px;
+    }
+
+    .section-title {
+      margin-bottom: 45px;
+    }
+
+    .section-title span {
+      color: #777;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .section-title h2 {
+      font-size: 48px;
+      letter-spacing: -2px;
+      margin-top: 8px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 30px;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-number {
+      font-size: 13px;
+      color: #888;
+      font-weight: 700;
+    }
+
+    .card h3 {
+      font-size: 25px;
+      letter-spacing: -.7px;
+      margin: 20px 0 8px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    .card-link {
+      margin-top: 25px;
+      font-weight: 700;
+    }
+
+    .featured {
+      background: #111;
+      color: white;
+      border-radius: 28px;
+      padding: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 45px;
+      align-items: center;
+    }
+
+    .featured h2 {
+      font-size: 48px;
+      line-height: 1;
+      letter-spacing: -2px;
+      margin: 15px 0;
+    }
+
+    .featured p {
+      color: #bbb;
+      margin-bottom: 25px;
+    }
+
+    .featured .button-light {
+      background: white;
+      color: #111;
+      border-color: white;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .service {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .service h3 {
+      margin-bottom: 4px;
+    }
+
+    .service p {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .contact {
+      background: #e9e9e5;
+      border-radius: 28px;
+      text-align: center;
+      padding: 75px 25px;
+    }
+
+    .contact h2 {
+      font-size: 52px;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .contact p {
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 35px 24px;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 75px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured {
+        grid-template-columns: 1fr;
+        padding: 35px;
+      }
+
+      h1 {
+        letter-spacing: -4px;
+      }
+
+      .section-title h2,
+      .contact h2 {
+        font-size: 40px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<nav>
-  <div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%">
-    <a class="logo" href="#">Start<span>Scale</span></a>
-    <div class="navlinks">
-      <a href="#guides">How-To Guides</a><a href="#shop">Templates</a><a href="#services">Services</a><a href="#about">About</a>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">StartScale</a>
+
+      <div class="nav-links">
+        <a href="#learn">Learn</a>
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-    <a class="navbtn" href="#shop">Shop</a>
-  </div>
-</nav>
+  </nav>
 
-<main>
-<section class="hero">
-<div class="container">
-<div class="eyebrow">Beginner-friendly • Practical • No fluff</div>
-<h1>Learn it.<br>Build it.<br>Scale it.</h1>
-<p>StartScale helps beginners figure out <b>how to do things online</b> with simple guides, useful templates, and practical services.</p>
-<div class="actions"><a class="btn" href="#guides">Start learning</a><a class="btn secondary" href="#shop">Browse templates</a></div>
-</div>
-</section>
 
-<section class="section" id="guides">
-<div class="container">
-<div class="sectionhead"><div><div class="eyebrow">Learn</div><h2>How-to guides</h2></div><p>Short, practical guides that turn “I don't know how” into clear next steps.</p></div>
-<div class="grid">
-<article class="card"><span class="tag">BUSINESS</span><h3>How to Start a Business</h3><p>Choose an idea, define your customer, create an offer, price it, and get ready to launch.</p><a class="learn" href="#">Read guide →</a></article>
-<article class="card"><span class="tag">ONLINE</span><h3>How to Make Your First $100 Online</h3><p>Pick one realistic method, create a simple offer, find prospects, and track your results.</p><a class="learn" href="#">Read guide →</a></article>
-<article class="card"><span class="tag">CONTENT</span><h3>How to Start Posting</h3><p>Choose a niche, plan your first posts, make useful content, and build consistency.</p><a class="learn" href="#">Read guide →</a></article>
-</div>
-</div>
-</section>
+  <!-- HERO -->
+  <header class="hero">
 
-<section class="section">
-<div class="container">
-<div class="hero-card">
-<div><div class="eyebrow" style="color:#aaa">Featured resource</div><h2>First $100 Online</h2><p>A beginner-friendly launch guide with a method picker, offer builder, outreach template, money tracker, and 7-day challenge.</p><div class="actions"><a class="btn" href="StartScale_First_100_Online.pdf">Get the guide — $9.99</a></div></div>
-<div class="mini-list"><div class="mini">✓ Choose your first money method</div><div class="mini">✓ Build your first offer</div><div class="mini">✓ Find your first customer</div><div class="mini">✓ Track revenue & expenses</div></div>
-</div>
-</div>
-</section>
+    <div>
+      <div class="eyebrow">
+        Beginner-friendly • Practical • No fluff
+      </div>
 
-<section class="section" id="shop">
-<div class="container">
-<div class="sectionhead"><div><div class="eyebrow">Shop</div><h2>Templates & tools</h2></div><p>Downloadable resources designed to make beginner tasks faster and easier.</p></div>
-<div class="grid">
-<article class="card"><span class="tag">BUSINESS</span><h3>Business Starter Kit</h3><p>Business idea worksheet, customer profile, offer builder, pricing worksheet, and launch checklist.</p><div class="price">$14.99</div><a class="learn" href="#">View product →</a></article>
-<article class="card"><span class="tag">CONTENT</span><h3>30-Day Content Planner</h3><p>Plan ideas, hooks, captions, posting days, and content goals without starting from a blank page.</p><div class="price">$7.99</div><a class="learn" href="#">View product →</a></article>
-<article class="card"><span class="tag">MONEY</span><h3>Simple Money Tracker</h3><p>Track income, expenses, profit, savings, and reinvestment in one beginner-friendly sheet.</p><div class="price">$4.99</div><a class="learn" href="#">View product →</a></article>
-</div>
-</div>
-</section>
+      <h1>
+        Learn.<br>
+        Build.<br>
+        Scale.
+      </h1>
 
-<section class="section" id="services">
-<div class="container">
-<div class="sectionhead"><div><div class="eyebrow">Services</div><h2>Need someone to do it with you?</h2></div><p>StartScale can also provide simple online services for beginners and small businesses.</p></div>
-<div class="grid">
-<article class="card"><span class="tag">SOCIAL</span><h3>Social Media Setup</h3><p>Profile setup, bio, content direction, starter posting plan, and basic visual organization.</p><div class="price">From $49</div><a class="learn" href="#">Request service →</a></article>
-<article class="card"><span class="tag">DESIGN</span><h3>Canva Design</h3><p>Simple social graphics, digital product pages, worksheets, and branded starter materials.</p><div class="price">From $25</div><a class="learn" href="#">Request service →</a></article>
-<article class="card"><span class="tag">BUSINESS</span><h3>Beginner Business Setup</h3><p>Turn your idea into a simple offer, basic brand direction, and launch plan.</p><div class="price">From $75</div><a class="learn" href="#">Request service →</a></article>
-</div>
-</div>
-</section>
+      <p class="hero-text">
+        StartScale helps beginners learn how to build something online
+        through simple guides, useful digital products, templates,
+        and practical services.
+      </p>
 
-<section class="section" id="about">
-<div class="container">
-<div class="sectionhead"><div><div class="eyebrow">The StartScale method</div><h2>Simple steps. Real progress.</h2></div></div>
-<div class="steps">
-<div class="step"><div class="num">01</div><h3>Learn</h3><p>Understand what to do in plain language.</p></div>
-<div class="step"><div class="num">02</div><h3>Choose</h3><p>Pick one path instead of trying everything at once.</p></div>
-<div class="step"><div class="num">03</div><h3>Build</h3><p>Use a guide or template to turn the idea into action.</p></div>
-<div class="step"><div class="num">04</div><h3>Scale</h3><p>Keep what works and improve it over time.</p></div>
-</div>
-</div>
-</section>
+      <div class="buttons">
+        <a href="#learn" class="button button-dark">
+          Start Learning
+        </a>
 
-<section class="section">
-<div class="container">
-<div class="cta"><div class="eyebrow">Start here</div><h2>Don't know where to begin?</h2><p>Start with one guide, one goal, and one small action. You don't need to know everything before you start.</p><div class="actions" style="justify-content:center"><a class="btn" href="#guides">Explore guides</a></div></div>
-</div>
-</section>
-</main>
+        <a href="#products" class="button button-light">
+          Browse Products
+        </a>
+      </div>
+    </div>
 
-<footer class="container"><div>© 2026 StartScale</div><div>Learn it. Build it. Scale it.</div></footer>
+    <div class="hero-card">
+      <small>StartScale</small>
+
+      <h2>
+        Start small.<br>
+        Build smart.
+      </h2>
+
+      <p>
+        Resources and services designed to help you turn an idea
+        into something real.
+      </p>
+    </div>
+
+  </header>
+
+
+  <!-- LEARN -->
+  <section id="learn">
+
+    <div class="section-title">
+      <span>Learn</span>
+      <h2>Start with the basics.</h2>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div>
+          <div class="card-number">01</div>
+          <h3>Choose Your Idea</h3>
+          <p>
+            Learn how to choose a simple business idea or service
+            you can actually start.
+          </p>
+        </div>
+
+        <a href="#" class="card-link">
+          Learn more →
+        </a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">02</div>
+          <h3>Create Your Offer</h3>
+          <p>
+            Turn your skill or idea into a clear offer people
+            can understand and buy.
+          </p>
+        </div>
+
+        <a href="#" class="card-link">
+          Learn more →
+        </a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">03</div>
+          <h3>Build Your Presence</h3>
+          <p>
+            Learn the basics of websites, social media,
+            branding, and getting discovered online.
+          </p>
+        </div>
+
+        <a href="#" class="card-link">
+          Learn more →
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURED GUIDE -->
+  <section>
+
+    <div class="featured">
+
+      <div>
+        <span class="eyebrow" style="color:#aaa;">
+          Featured Guide
+        </span>
+
+        <h2>
+          Beginner Business & Services Guide
+        </h2>
+
+        <p>
+          A practical starting point for beginners who want
+          to learn how to choose a service, create an offer,
+          build an online presence, and find customers.
+        </p>
+
+        <a
+          href="StartScale_Beginner_Business_Guide.pdf"
+          class="button button-light"
+          target="_blank"
+        >
+          View the Guide
+        </a>
+      </div>
+
+      <div>
+        <div style="
+          border:1px solid #444;
+          border-radius:20px;
+          padding:35px;
+        ">
+          <small style="color:#888;">
+            INSIDE
+          </small>
+
+          <h3 style="
+            font-size:30px;
+            margin:15px 0;
+          ">
+            Learn → Build → Launch
+          </h3>
+
+          <p style="color:#aaa;">
+            Beginner-friendly steps without unnecessary
+            complicated business jargon.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+  <section id="products">
+
+    <div class="section-title">
+      <span>Digital Products</span>
+      <h2>Tools you can use.</h2>
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <div>
+          <div class="card-number">TEMPLATE</div>
+          <h3>Business Starter Planner</h3>
+          <p>
+            Organize your idea, goals, offers, and next steps.
+          </p>
+        </div>
+
+        <a href="#" class="card-link">
+          Coming soon →
+        </a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">TEMPLATE</div>
+          <h3>Service Offer Template</h3>
+          <p>
+            A simple template for creating and presenting
+            your first service.
+          </p>
+        </div>
+
+        <a href="#" class="card-link">
+          Coming soon →
+        </a>
+      </div>
+
+      <div class="card">
+        <div>
+          <div class="card-number">PROMPT PACK</div>
+          <h3>AI Beginner Toolkit</h3>
+          <p>
+            Useful prompts for planning, writing, research,
+            content, and everyday online work.
+          </p>
+        </div>
+
+        <a href="#" class="card-link">
+          Coming soon →
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section id="services">
+
+    <div class="section-title">
+      <span>Services</span>
+      <h2>Need help building it?</h2>
+    </div>
+
+    <div class="service-list">
+
+      <div class="service">
+        <div>
+          <h3>Website Setup</h3>
+          <p>
+            Simple website setup for beginners and small projects.
+          </p>
+        </div>
+
+        <strong>Request →</strong>
+      </div>
+
+      <div class="service">
+        <div>
+          <h3>Social Media Setup</h3>
+          <p>
+            Profile setup, basic branding, and content organization.
+          </p>
+        </div>
+
+        <strong>Request →</strong>
+      </div>
+
+      <div class="service">
+        <div>
+          <h3>Digital Product Setup</h3>
+          <p>
+            Help organizing guides, templates, and downloadable products.
+          </p>
+        </div>
+
+        <strong>Request →</strong>
+      </div>
+
+      <div class="service">
+        <div>
+          <h3>AI Workflow Setup</h3>
+          <p>
+            Simple AI workflows to save time on repetitive tasks.
+          </p>
+        </div>
+
+        <strong>Request →</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact">
+
+    <div class="contact">
+
+      <h2>
+        Have an idea?
+      </h2>
+
+      <p>
+        Tell us what you're trying to build and what you need help with.
+        StartScale is designed to make getting started simpler.
+      </p>
+
+      <a
+        href="mailto:startscale@example.com"
+        class="button button-dark"
+      >
+        Contact StartScale
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <strong>StartScale</strong>
+
+    <br><br>
+
+    Learn it. Build it. Scale it.
+
+    <br><br>
+
+    © 2026 StartScale. All rights reserved.
+
+  </footer>
+
 </body>
 </html>
