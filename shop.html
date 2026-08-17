@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StartScale Shop</title>
+  <meta name="description" content="Practical beginner-friendly resources from StartScale.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f7f7f5;
+      color: #101114;
+    }
+    nav {
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 6%;
+      border-bottom: 1px solid #ddd;
+      background: rgba(247,247,245,.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo { font-size: 24px; font-weight: 850; }
+    .back {
+      text-decoration: none;
+      color: #101114;
+      font-weight: 650;
+    }
+    .hero {
+      padding: 90px 7% 50px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .eyebrow {
+      letter-spacing: .18em;
+      font-weight: 800;
+      color: #777;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(48px, 9vw, 92px);
+      line-height: .95;
+      margin: 0 0 25px;
+      letter-spacing: -.055em;
+    }
+    .intro {
+      font-size: 20px;
+      line-height: 1.6;
+      color: #666a73;
+      max-width: 700px;
+    }
+    .product {
+      max-width: 1100px;
+      margin: 30px auto 100px;
+      padding: 0 7%;
+    }
+    .card {
+      background: #111;
+      color: white;
+      border-radius: 30px;
+      padding: 38px;
+      display: grid;
+      gap: 22px;
+    }
+    .tag {
+      display: inline-block;
+      width: fit-content;
+      background: white;
+      color: #111;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+    h2 {
+      font-size: clamp(32px, 6vw, 56px);
+      margin: 0;
+      letter-spacing: -.04em;
+    }
+    .desc {
+      color: #c8c8c8;
+      font-size: 18px;
+      line-height: 1.6;
+      max-width: 720px;
+    }
+    .price {
+      font-size: 36px;
+      font-weight: 800;
+    }
+    .button {
+      display: inline-block;
+      width: fit-content;
+      background: white;
+      color: #111;
+      padding: 17px 26px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 17px;
+    }
+    .note {
+      font-size: 13px;
+      color: #999;
+      margin: 0;
+    }
+    footer {
+      padding: 40px 7%;
+      color: #777;
+      border-top: 1px solid #ddd;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">StartScale</div>
+    <a class="back" href="index.html">← Home</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">SHOP • PRACTICAL • BEGINNER-FRIENDLY</div>
+      <h1>Tools to help you<br>start.</h1>
+      <p class="intro">
+        Simple resources designed to turn “I don't know how”
+        into clear, practical next steps.
+      </p>
+    </section>
+
+    <section class="product">
+      <div class="card">
+        <span class="tag">STARTSCALE GUIDE</span>
+        <h2>Beginner Business Guide</h2>
+        <p class="desc">
+          A practical beginner-friendly guide for turning a useful skill
+          or idea into a simple online service.
+        </p>
+
+        <!-- Change $9.99 if your selling price is different. -->
+        <div class="price">$9.99</div>
+
+        <!-- Replace YOUR_CHECKOUT_LINK with your payment/checkout link. -->
+        <a class="button" href="YOUR_CHECKOUT_LINK">Get the guide →</a>
+
+        <p class="note">
+          After checkout, customers should receive the PDF download.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 StartScale
+  </footer>
+
+</body>
+</html>
