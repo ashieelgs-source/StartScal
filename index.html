@@ -1,19 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>StartScale — Products</title>
+  <title>StartScale — Learn. Build. Scale.</title>
 
   <meta
     name="description"
-    content="StartScale digital products, templates, guides, and beginner resources."
+    content="StartScale helps beginners learn, build, and grow online through practical guides, digital products, templates, and services."
   >
 
   <style>
@@ -36,8 +31,8 @@
     }
 
     a {
-      text-decoration: none;
       color: inherit;
+      text-decoration: none;
     }
 
     nav {
@@ -47,10 +42,10 @@
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #ddd;
-      background: rgba(247,247,245,.96);
+      background: rgba(247,247,245,0.96);
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 100;
     }
 
     .logo {
@@ -59,14 +54,25 @@
       letter-spacing: -1px;
     }
 
-    .back {
-      font-weight: 700;
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .nav-button {
+      background: #111;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 999px;
     }
 
     .hero {
       max-width: 1200px;
       margin: auto;
-      padding: 100px 6% 70px;
+      padding: 110px 6% 120px;
     }
 
     .eyebrow {
@@ -74,46 +80,121 @@
       font-size: 14px;
       font-weight: 800;
       letter-spacing: 4px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     h1 {
-      font-size: clamp(55px, 10vw, 100px);
-      line-height: .9;
-      letter-spacing: -6px;
-      margin-bottom: 30px;
+      font-size: clamp(58px, 11vw, 120px);
+      line-height: .88;
+      letter-spacing: -7px;
+      max-width: 1000px;
+      margin-bottom: 40px;
     }
 
-    .intro {
-      max-width: 700px;
-      font-size: 21px;
+    .hero-text {
+      max-width: 720px;
       color: #666;
+      font-size: 22px;
+      line-height: 1.55;
+      margin-bottom: 40px;
     }
 
-    .products {
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 17px 27px;
+      border-radius: 15px;
+      font-size: 16px;
+      font-weight: 800;
+      text-align: center;
+      border: 1px solid #111;
+    }
+
+    .button-dark {
+      background: #111;
+      color: white;
+    }
+
+    .button-light {
+      background: white;
+      color: #111;
+    }
+
+    section {
       max-width: 1200px;
       margin: auto;
-      padding: 40px 6% 120px;
+      padding: 100px 6%;
+    }
+
+    .section-label {
+      color: #777;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
     }
 
     .section-title {
-      font-size: 55px;
-      letter-spacing: -3px;
-      margin-bottom: 45px;
+      font-size: clamp(42px, 7vw, 72px);
+      line-height: 1;
+      letter-spacing: -4px;
+      margin-bottom: 25px;
     }
 
-    .grid {
+    .section-description {
+      max-width: 700px;
+      color: #666;
+      font-size: 19px;
+      margin-bottom: 50px;
+    }
+
+    .learn-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .learn-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      padding: 32px;
+      min-height: 270px;
+    }
+
+    .learn-card h3 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .learn-card p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    .card-link {
+      display: inline-block;
+      margin-top: 30px;
+      font-weight: 800;
+    }
+
+    .product-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 22px;
     }
 
-    .card {
+    .product-card {
       background: white;
       border: 1px solid #ddd;
       border-radius: 28px;
-      padding: 38px;
-      min-height: 390px;
+      padding: 35px;
+      min-height: 380px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -131,114 +212,155 @@
       margin-bottom: 25px;
     }
 
-    .card h2 {
-      font-size: 33px;
+    .product-card h3 {
+      font-size: 32px;
       letter-spacing: -1px;
       margin-bottom: 15px;
     }
 
-    .card p {
+    .product-card p {
       color: #666;
       font-size: 17px;
     }
 
     .price {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 900;
       margin: 25px 0 18px;
     }
 
-    .button {
-      display: inline-block;
-      padding: 16px 24px;
-      border-radius: 14px;
-      border: 1px solid #111;
-      font-weight: 800;
-      text-align: center;
-    }
-
-    .button-dark {
+    .services {
       background: #111;
       color: white;
+      max-width: none;
+      padding-left: max(6%, calc((100% - 1200px) / 2));
+      padding-right: max(6%, calc((100% - 1200px) / 2));
     }
 
-    .button-light {
-      background: white;
+    .services .section-label {
+      color: #aaa;
     }
 
-    .coming {
-      font-weight: 800;
+    .services .section-description {
+      color: #aaa;
     }
 
-    .info {
-      margin-top: 60px;
-      padding: 40px;
-      border-radius: 28px;
-      background: #111;
-      color: white;
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
-    .info h2 {
-      font-size: 35px;
+    .service-card {
+      border: 1px solid #333;
+      border-radius: 25px;
+      padding: 30px;
+      min-height: 290px;
+    }
+
+    .service-card h3 {
+      font-size: 25px;
       margin-bottom: 15px;
     }
 
-    .info p {
+    .service-card p {
       color: #aaa;
-      max-width: 650px;
+    }
+
+    .about-box {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      padding: 50px;
+    }
+
+    .about-box p {
+      max-width: 800px;
+      color: #666;
+      font-size: 20px;
+    }
+
+    .cta {
+      text-align: center;
+      background: white;
+      border-radius: 30px;
+      border: 1px solid #ddd;
+      margin-bottom: 100px;
+    }
+
+    .cta .section-description {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta .buttons {
+      justify-content: center;
     }
 
     footer {
       border-top: 1px solid #ddd;
       padding: 45px 6%;
-      text-align: center;
       color: #777;
+      text-align: center;
     }
 
-    @media (max-width: 750px) {
+    .footer-logo {
+      color: #111;
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 800px) {
 
       nav {
         height: 70px;
       }
 
+      .nav-links {
+        gap: 12px;
+        font-size: 13px;
+      }
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
       .hero {
-        padding: 75px 6% 60px;
+        padding: 80px 6% 90px;
       }
 
       h1 {
         letter-spacing: -4px;
       }
 
-      .intro {
+      .hero-text {
         font-size: 18px;
       }
 
-      .products {
-        padding: 30px 6% 80px;
+      section {
+        padding: 75px 6%;
       }
 
-      .grid {
+      .learn-grid,
+      .product-grid,
+      .service-grid {
         grid-template-columns: 1fr;
       }
 
-      .card {
-        min-height: 350px;
+      .about-box {
         padding: 30px;
       }
 
       .section-title {
-        font-size: 42px;
+        letter-spacing: -2px;
       }
-
     }
 
   </style>
-
 </head>
 
-
 <body>
-
 
   <!-- NAVIGATION -->
 
@@ -248,9 +370,25 @@
       StartScale
     </a>
 
-    <a class="back" href="index.html">
-      ← Home
-    </a>
+    <div class="nav-links">
+
+      <a href="#learn">
+        Learn
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="#about">
+        About
+      </a>
+
+      <a class="nav-button" href="shop.html">
+        Shop
+      </a>
+
+    </div>
 
   </nav>
 
@@ -262,37 +400,139 @@
     <section class="hero">
 
       <div class="eyebrow">
-        STARTSCALE • PRODUCTS
+        BEGINNER-FRIENDLY • PRACTICAL • NO FLUFF
       </div>
 
       <h1>
-        Tools for
-        starting.
+        Learn.<br>
+        Build.<br>
+        Scale.
       </h1>
 
-      <p class="intro">
-        Practical digital products and templates designed
-        to help beginners take action online.
+      <p class="hero-text">
+        StartScale helps beginners figure out how to do things
+        online through simple guides, useful digital products,
+        templates, and practical services.
       </p>
+
+      <div class="buttons">
+
+        <a class="button button-dark" href="#learn">
+          Start Learning
+        </a>
+
+        <a class="button button-light" href="shop.html">
+          Browse Products
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- LEARN -->
+
+    <section id="learn">
+
+      <div class="section-label">
+        LEARN
+      </div>
+
+      <h2 class="section-title">
+        Turn "I don't know"
+        into "I got it."
+      </h2>
+
+      <p class="section-description">
+        Straightforward resources designed for people who are
+        starting from scratch and want practical next steps.
+      </p>
+
+
+      <div class="learn-grid">
+
+        <article class="learn-card">
+
+          <h3>
+            Online Basics
+          </h3>
+
+          <p>
+            Learn the fundamentals of creating, sharing,
+            selling, and managing things online.
+          </p>
+
+          <a class="card-link" href="#services">
+            Explore →
+          </a>
+
+        </article>
+
+
+        <article class="learn-card">
+
+          <h3>
+            Build Skills
+          </h3>
+
+          <p>
+            Learn useful skills that can help you create
+            projects, products, and services.
+          </p>
+
+          <a class="card-link" href="#services">
+            Explore →
+          </a>
+
+        </article>
+
+
+        <article class="learn-card">
+
+          <h3>
+            Take Action
+          </h3>
+
+          <p>
+            Stop endlessly researching and start taking
+            practical steps toward your goals.
+          </p>
+
+          <a class="card-link" href="shop.html">
+            Get resources →
+          </a>
+
+        </article>
+
+      </div>
 
     </section>
 
 
     <!-- PRODUCTS -->
 
-    <section class="products">
+    <section id="products">
+
+      <div class="section-label">
+        DIGITAL PRODUCTS
+      </div>
 
       <h2 class="section-title">
-        Browse products
+        Ready-to-use tools.
       </h2>
 
+      <p class="section-description">
+        Simple resources you can use immediately instead of
+        starting everything from zero.
+      </p>
 
-      <div class="grid">
+
+      <div class="product-grid">
 
 
-        <!-- AI BEGINNER TOOLKIT -->
+        <!-- AI TOOLKIT -->
 
-        <article class="card">
+        <article class="product-card">
 
           <div>
 
@@ -300,18 +540,17 @@
               PROMPT PACK
             </span>
 
-            <h2>
+            <h3>
               AI Beginner Toolkit
-            </h2>
+            </h3>
 
             <p>
-              Useful prompts for planning, writing, research,
-              content creation, ideas, brainstorming, and
-              everyday online work.
+              Useful AI prompts for planning, writing,
+              research, content, ideas, and everyday
+              online work.
             </p>
 
           </div>
-
 
           <div>
 
@@ -333,9 +572,9 @@
         </article>
 
 
-        <!-- SERVICE OFFER TEMPLATE -->
+        <!-- SERVICE TEMPLATE -->
 
-        <article class="card">
+        <article class="product-card">
 
           <div>
 
@@ -343,17 +582,16 @@
               TEMPLATE
             </span>
 
-            <h2>
+            <h3>
               Service Offer Template
-            </h2>
+            </h3>
 
             <p>
-              A beginner-friendly template for turning a skill
-              into a simple service offer.
+              A simple framework for creating and presenting
+              your first online service.
             </p>
 
           </div>
-
 
           <div>
 
@@ -361,155 +599,7 @@
               Coming Soon
             </div>
 
-            <span class="coming">
-              Stay tuned →
-            </span>
-
-          </div>
-
-        </article>
-
-
-        <!-- BUSINESS STARTER GUIDE -->
-
-        <article class="card">
-
-          <div>
-
-            <span class="tag">
-              GUIDE
-            </span>
-
-            <h2>
-              Business Starter Guide
-            </h2>
-
-            <p>
-              A simple guide for choosing an idea, creating
-              an offer, and taking your first steps online.
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <div class="price">
-              Coming Soon
-            </div>
-
-            <span class="coming">
-              Stay tuned →
-            </span>
-
-          </div>
-
-        </article>
-
-
-        <!-- CONTENT PLANNER -->
-
-        <article class="card">
-
-          <div>
-
-            <span class="tag">
-              TEMPLATE
-            </span>
-
-            <h2>
-              Content Planner
-            </h2>
-
-            <p>
-              Organize content ideas, goals, schedules,
-              and next steps in one simple system.
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <div class="price">
-              Coming Soon
-            </div>
-
-            <span class="coming">
-              Stay tuned →
-            </span>
-
-          </div>
-
-        </article>
-
-
-        <!-- ONLINE SERVICE SETUP -->
-
-        <article class="card">
-
-          <div>
-
-            <span class="tag">
-              SERVICE
-            </span>
-
-            <h2>
-              Online Service Setup
-            </h2>
-
-            <p>
-              Help organizing the basic pieces needed to
-              present and launch a simple online service.
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <div class="price">
-              Coming Soon
-            </div>
-
-            <span class="coming">
-              Stay tuned →
-            </span>
-
-          </div>
-
-        </article>
-
-
-        <!-- WEBSITE STARTER -->
-
-        <article class="card">
-
-          <div>
-
-            <span class="tag">
-              SERVICE
-            </span>
-
-            <h2>
-              Website Starter Setup
-            </h2>
-
-            <p>
-              A simple website setup service for beginners
-              who want a clean online starting point.
-            </p>
-
-          </div>
-
-
-          <div>
-
-            <div class="price">
-              Coming Soon
-            </div>
-
-            <span class="coming">
+            <span>
               Stay tuned →
             </span>
 
@@ -521,19 +611,146 @@
       </div>
 
 
-      <!-- INFO -->
+      <div style="margin-top:35px;">
 
-      <div class="info">
+        <a class="button button-light" href="shop.html">
+          View All Products →
+        </a>
 
-        <h2>
-          More resources are coming.
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services" class="services">
+
+      <div class="section-label">
+        SERVICES
+      </div>
+
+      <h2 class="section-title">
+        Need someone to
+        help you do it?
+      </h2>
+
+      <p class="section-description">
+        Practical online services for people who want help
+        getting something done instead of figuring everything
+        out alone.
+      </p>
+
+
+      <div class="service-grid">
+
+
+        <article class="service-card">
+
+          <h3>
+            Website Setup
+          </h3>
+
+          <p>
+            Help getting a simple website or landing page
+            organized and ready to share.
+          </p>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <h3>
+            Digital Product Setup
+          </h3>
+
+          <p>
+            Help organizing a digital product, product page,
+            and basic selling workflow.
+          </p>
+
+        </article>
+
+
+        <article class="service-card">
+
+          <h3>
+            Beginner Online Setup
+          </h3>
+
+          <p>
+            Practical help setting up the basic pieces
+            needed to start an online project.
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+      <div class="section-label">
+        ABOUT STARTSCALE
+      </div>
+
+      <div class="about-box">
+
+        <h2 class="section-title">
+          Less confusion.
+          More action.
         </h2>
 
         <p>
-          StartScale will continue adding beginner-friendly
-          guides, templates, digital products, and practical
-          services.
+          StartScale is built for beginners who want practical
+          information without complicated jargon or endless
+          theory.
         </p>
+
+        <br>
+
+        <p>
+          The goal is simple: learn something useful, build
+          something real, and take the next step.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+      <div class="section-label">
+        READY?
+      </div>
+
+      <h2 class="section-title">
+        Start with one step.
+      </h2>
+
+      <p class="section-description">
+        Pick a resource, learn something useful, and start
+        building.
+      </p>
+
+      <div class="buttons">
+
+        <a class="button button-dark" href="shop.html">
+          Browse Products
+        </a>
+
+        <a class="button button-light" href="#services">
+          Explore Services
+        </a>
 
       </div>
 
@@ -546,20 +763,21 @@
 
   <footer>
 
-    <strong>
+    <div class="footer-logo">
       StartScale
-    </strong>
+    </div>
 
-    <br><br>
+    <p>
+      Learn. Build. Scale.
+    </p>
 
-    Learn. Build. Scale.
+    <br>
 
-    <br><br>
-
-    © 2026 StartScale. All rights reserved.
+    <p>
+      © 2026 StartScale. All rights reserved.
+    </p>
 
   </footer>
-
 
 </body>
 </html>
