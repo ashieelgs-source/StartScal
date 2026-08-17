@@ -1,22 +1,808 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="refresh" content="0; url=https://ashieelgs-source.github.io/StartScal/">
-  <link rel="canonical" href="https://ashieelgs-source.github.io/StartScal/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redirecting…</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StartScale — Learn. Build. Scale.</title>
+
+  <meta
+    name="description"
+    content="StartScale helps beginners build something online through practical guides, digital products, templates, and services."
+  >
+
   <style>
-    body { font-family: Arial, Helvetica, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; color: #111; background: #f7f7f5; }
-    a { color: #0b63d6; }
-    .wrap { text-align: center; padding: 24px; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #111;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1180px, 92%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(247,247,245,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      color: #333;
+    }
+
+    .nav-links a:hover {
+      opacity: .6;
+    }
+
+    .nav-button {
+      background: #111;
+      color: white !important;
+      padding: 12px 20px;
+      border-radius: 999px;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 110px 0 100px;
+    }
+
+    .eyebrow {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #777;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(55px, 9vw, 105px);
+      line-height: .92;
+      letter-spacing: -6px;
+      max-width: 850px;
+      margin-bottom: 35px;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      font-size: 22px;
+      color: #666;
+      margin-bottom: 40px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 18px 28px;
+      border-radius: 16px;
+      font-size: 17px;
+      font-weight: 800;
+      transition: .2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-dark {
+      background: #111;
+      color: white;
+    }
+
+    .button-light {
+      background: white;
+      border: 2px solid #222;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-label {
+      color: #777;
+      font-weight: 800;
+      letter-spacing: 4px;
+      font-size: 13px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .section-title {
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+    }
+
+    .section-description {
+      color: #666;
+      font-size: 19px;
+      max-width: 700px;
+      margin-bottom: 45px;
+    }
+
+    /* PRODUCTS */
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .product-card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 28px;
+      padding: 38px;
+      min-height: 310px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: .2s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(0,0,0,.07);
+    }
+
+    .product-type {
+      color: #777;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .product-card h3 {
+      font-size: 31px;
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin: 20px 0 15px;
+    }
+
+    .product-card p {
+      color: #666;
+      font-size: 17px;
+      max-width: 500px;
+    }
+
+    .product-bottom {
+      margin-top: 30px;
+    }
+
+    .buy-button {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 14px 23px;
+      border-radius: 12px;
+      font-weight: 800;
+    }
+
+    .buy-button:hover {
+      opacity: .8;
+    }
+
+    /* SERVICES */
+
+    .service-box {
+      background: #111;
+      color: white;
+      border-radius: 30px;
+      padding: 55px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .service-box h2 {
+      font-size: clamp(40px, 5vw, 65px);
+      line-height: 1;
+      letter-spacing: -3px;
+    }
+
+    .service-box p {
+      color: #bbb;
+      font-size: 18px;
+      margin: 25px 0;
+    }
+
+    .service-button {
+      display: inline-block;
+      background: white;
+      color: #111;
+      padding: 16px 25px;
+      border-radius: 12px;
+      font-weight: 800;
+    }
+
+    /* HOW IT WORKS */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .step {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 24px;
+      padding: 32px;
+    }
+
+    .step-number {
+      font-size: 14px;
+      font-weight: 900;
+      color: #777;
+    }
+
+    .step h3 {
+      font-size: 25px;
+      margin: 25px 0 10px;
+    }
+
+    .step p {
+      color: #666;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 50px 0;
+      margin-top: 50px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .footer-logo {
+      font-size: 22px;
+      font-weight: 900;
+    }
+
+    .footer-text {
+      color: #777;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      .nav-inner {
+        min-height: 65px;
+      }
+
+      .nav-links {
+        gap: 10px;
+      }
+
+      .nav-links a:not(.nav-button) {
+        display: none;
+      }
+
+      .hero {
+        padding: 75px 0 70px;
+      }
+
+      .hero h1 {
+        letter-spacing: -4px;
+      }
+
+      .hero-text {
+        font-size: 19px;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .products {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .service-box {
+        grid-template-columns: 1fr;
+        padding: 35px;
+        gap: 25px;
+      }
+
+      .product-card {
+        padding: 30px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="wrap">
-    <p>Redirecting to <a href="https://ashieelgs-source.github.io/StartScal/">https://ashieelgs-source.github.io/StartScal/</a></p>
-    <p>If you are not redirected automatically, click the link above.</p>
-  </div>
-  <script>window.location.replace('https://ashieelgs-source.github.io/StartScal/');</script>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="index.html" class="logo">
+        StartScale
+      </a>
+
+      <div class="nav-links">
+        <a href="#products">Products</a>
+        <a href="#services">Services</a>
+        <a href="#how">How It Works</a>
+
+        <a href="#products" class="nav-button">
+          Shop
+        </a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="eyebrow">
+          Beginner-friendly • Practical • No fluff
+        </div>
+
+        <h1>
+          Learn.<br>
+          Build.<br>
+          Scale.
+        </h1>
+
+        <p class="hero-text">
+          StartScale helps beginners learn how to build something
+          online through simple guides, useful digital products,
+          templates, and practical services.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#products" class="button button-dark">
+            Start Learning
+          </a>
+
+          <a href="#products" class="button button-light">
+            Browse Products
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <section id="products">
+
+      <div class="container">
+
+        <div class="section-label">
+          Digital Products
+        </div>
+
+        <h2 class="section-title">
+          Tools to help you start.
+        </h2>
+
+        <p class="section-description">
+          Practical resources designed to help you go from
+          "I don't know how" to actually getting started.
+        </p>
+
+
+        <div class="products">
+
+
+          <!-- AI TOOLKIT -->
+
+          <article class="product-card">
+
+            <div>
+
+              <div class="product-type">
+                Digital Product
+              </div>
+
+              <h3>
+                AI Beginner Toolkit
+              </h3>
+
+              <p>
+                Useful AI prompts for planning, writing,
+                research, content, and everyday online work.
+              </p>
+
+            </div>
+
+            <div class="product-bottom">
+
+              <a
+                href="https://payhip.com/b/1MWhp"
+                target="_blank"
+                rel="noopener"
+                class="buy-button"
+              >
+                Buy Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- SERVICE OFFER -->
+
+          <article class="product-card">
+
+            <div>
+
+              <div class="product-type">
+                Template
+              </div>
+
+              <h3>
+                Service Offer Template
+              </h3>
+
+              <p>
+                A simple resource for creating and presenting
+                your first service offer.
+              </p>
+
+            </div>
+
+            <div class="product-bottom">
+
+              <a
+                href="https://payhip.com/b/3IHOA"
+                target="_blank"
+                rel="noopener"
+                class="buy-button"
+              >
+                Buy Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- CONTENT PLANNING -->
+
+          <article class="product-card">
+
+            <div>
+
+              <div class="product-type">
+                Digital Toolkit
+              </div>
+
+              <h3>
+                Content Planning Toolkit
+              </h3>
+
+              <p>
+                Organize your content ideas, plan your posts,
+                and create a simple content workflow.
+              </p>
+
+            </div>
+
+            <div class="product-bottom">
+
+              <a
+                href="https://payhip.com/b/LsUxI"
+                target="_blank"
+                rel="noopener"
+                class="buy-button"
+              >
+                Buy Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- SERVICE STARTER -->
+
+          <article class="product-card">
+
+            <div>
+
+              <div class="product-type">
+                Starter Pack
+              </div>
+
+              <h3>
+                Service Starter Pack
+              </h3>
+
+              <p>
+                Practical resources to help you choose,
+                organize, and launch your first online service.
+              </p>
+
+            </div>
+
+            <div class="product-bottom">
+
+              <a
+                href="https://payhip.com/b/slpbZ"
+                target="_blank"
+                rel="noopener"
+                class="buy-button"
+              >
+                Buy Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- ONLINE BUSINESS -->
+
+          <article class="product-card">
+
+            <div>
+
+              <div class="product-type">
+                Business Starter Pack
+              </div>
+
+              <h3>
+                Online Business Starter Pack
+              </h3>
+
+              <p>
+                A beginner-friendly collection for getting
+                your online business organized and moving.
+              </p>
+
+            </div>
+
+            <div class="product-bottom">
+
+              <a
+                href="https://payhip.com/b/Bctbu"
+                target="_blank"
+                rel="noopener"
+                class="buy-button"
+              >
+                Buy Now →
+              </a>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section id="services">
+
+      <div class="container">
+
+        <div class="service-box">
+
+          <div>
+
+            <div class="section-label" style="color:#aaa;">
+              Services
+            </div>
+
+            <h2>
+              Need help instead of a template?
+            </h2>
+
+          </div>
+
+          <div>
+
+            <p>
+              StartScale also offers practical services for
+              people who want help getting their online project
+              organized and moving forward.
+            </p>
+
+            <a
+              href="https://payhip.com/b/3IHOA"
+              target="_blank"
+              rel="noopener"
+              class="service-button"
+            >
+              View Service Offer →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOW IT WORKS -->
+
+    <section id="how">
+
+      <div class="container">
+
+        <div class="section-label">
+          How It Works
+        </div>
+
+        <h2 class="section-title">
+          Start simple.
+        </h2>
+
+        <p class="section-description">
+          You don't need everything figured out before you begin.
+        </p>
+
+
+        <div class="steps">
+
+          <div class="step">
+
+            <div class="step-number">
+              01
+            </div>
+
+            <h3>
+              Choose a resource
+            </h3>
+
+            <p>
+              Pick the guide, toolkit, template, or starter pack
+              that matches what you're trying to accomplish.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              02
+            </div>
+
+            <h3>
+              Put it into action
+            </h3>
+
+            <p>
+              Use the resource to organize your idea and
+              start taking practical steps.
+            </p>
+
+          </div>
+
+
+          <div class="step">
+
+            <div class="step-number">
+              03
+            </div>
+
+            <h3>
+              Keep building
+            </h3>
+
+            <p>
+              Improve your system, offer, content, or business
+              as you learn and grow.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div class="footer-logo">
+        StartScale
+      </div>
+
+      <div class="footer-text">
+        Learn. Build. Scale.
+      </div>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>
