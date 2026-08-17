@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StartScale — Services</title>
+<meta name="description" content="StartScale services for beginners and small online projects.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f7f5;color:#111;line-height:1.5}
+a{text-decoration:none;color:inherit}
+nav{height:82px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ddd;background:rgba(247,247,245,.96);position:sticky;top:0;z-index:10}
+.logo{font-size:25px;font-weight:900;letter-spacing:-1px}
+.back{font-weight:700}
+.hero{max-width:1200px;margin:auto;padding:95px 6% 65px}
+.eyebrow{color:#777;font-size:14px;font-weight:800;letter-spacing:4px;margin-bottom:20px}
+h1{font-size:clamp(54px,10vw,100px);line-height:.9;letter-spacing:-6px;margin-bottom:30px}
+.intro{max-width:720px;font-size:21px;color:#666}
+.services{max-width:1200px;margin:auto;padding:30px 6% 110px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:white;border:1px solid #ddd;border-radius:28px;padding:34px;min-height:310px;display:flex;flex-direction:column;justify-content:space-between}
+.number{font-size:13px;color:#888;font-weight:800;letter-spacing:2px}
+.card h2{font-size:31px;letter-spacing:-1px;margin:14px 0}
+.card p{color:#666;font-size:16px;max-width:500px}
+.price{font-weight:900;font-size:18px;margin-top:20px}
+.request{display:inline-block;margin-top:18px;background:#111;color:#fff;padding:15px 21px;border-radius:13px;font-weight:800}
+.form-wrap{margin-top:70px;background:#111;color:white;border-radius:30px;padding:45px}
+.form-wrap h2{font-size:42px;letter-spacing:-2px;margin-bottom:12px}
+.form-wrap>p{color:#aaa;margin-bottom:28px}
+form{display:grid;gap:16px;max-width:760px}
+label{font-size:14px;font-weight:700}
+input,select,textarea{width:100%;margin-top:7px;padding:15px;border-radius:11px;border:1px solid #444;background:#fff;color:#111;font:inherit}
+textarea{min-height:130px;resize:vertical}
+button{border:0;background:#fff;color:#111;padding:16px 23px;border-radius:13px;font:inherit;font-weight:800;cursor:pointer;margin-top:5px}
+.note{font-size:12px;color:#999;margin-top:4px}
+footer{border-top:1px solid #ddd;padding:45px 6%;text-align:center;color:#777}
+@media(max-width:750px){nav{height:70px}.hero{padding:75px 6% 55px}h1{letter-spacing:-4px}.intro{font-size:18px}.services{padding:20px 6% 80px}.grid{grid-template-columns:1fr}.card{min-height:300px}.form-wrap{padding:30px 22px}.form-wrap h2{font-size:34px}}
+</style>
+</head>
+<body>
+
+<nav>
+<a class="logo" href="index.html">StartScale</a>
+<a class="back" href="index.html">← Home</a>
+</nav>
+
+<main>
+<section class="hero">
+<div class="eyebrow">STARTSCALE • SERVICES</div>
+<h1>Need help<br>building it?</h1>
+<p class="intro">Practical setup services for beginners who want help turning an idea into something real online.</p>
+</section>
+
+<section class="services">
+<div class="grid">
+
+<article class="card">
+<div>
+<div class="number">01 • WEBSITE</div>
+<h2>Website Setup</h2>
+<p>Get a clean starter website or landing page organized and ready to share. Includes basic structure, mobile-friendly layout, and launch guidance.</p>
+</div>
+<div><div class="price">Starting at $75</div><a class="request" href="#request">Request service →</a></div>
+</article>
+
+<article class="card">
+<div>
+<div class="number">02 • SOCIAL MEDIA</div>
+<h2>Social Media Setup</h2>
+<p>Get your profile organized with a clear bio, profile direction, starter content ideas, and a simple posting plan.</p>
+</div>
+<div><div class="price">Starting at $50</div><a class="request" href="#request">Request service →</a></div>
+</article>
+
+<article class="card">
+<div>
+<div class="number">03 • DIGITAL PRODUCTS</div>
+<h2>Digital Product Setup</h2>
+<p>Turn your information or idea into a polished guide, checklist, template, or other beginner-friendly digital product.</p>
+</div>
+<div><div class="price">Starting at $75</div><a class="request" href="#request">Request service →</a></div>
+</article>
+
+<article class="card">
+<div>
+<div class="number">04 • AI WORKFLOWS</div>
+<h2>AI Workflow Setup</h2>
+<p>Set up simple AI-assisted workflows for tasks like brainstorming, writing, organization, research, or content planning.</p>
+</div>
+<div><div class="price">Starting at $50</div><a class="request" href="#request">Request service →</a></div>
+</article>
+
+<article class="card">
+<div>
+<div class="number">05 • ONLINE STARTUP</div>
+<h2>Beginner Business Setup</h2>
+<p>Get help organizing your idea, offer, basic online presence, and launch checklist so you know what to do next.</p>
+</div>
+<div><div class="price">Starting at $100</div><a class="request" href="#request">Request service →</a></div>
+</article>
+
+</div>
+
+<div class="form-wrap" id="request">
+<h2>Request a service</h2>
+<p>Tell us what you're trying to build. Tapping submit will open an email addressed to StartScale with your request.</p>
+
+<form action="mailto:ashieelgs@gmail.com" method="post" enctype="text/plain">
+<label>Your name
+<input type="text" name="Name" placeholder="Your name" required>
+</label>
+
+<label>Email
+<input type="email" name="Email" placeholder="you@example.com" required>
+</label>
+
+<label>Service
+<select name="Service" required>
+<option value="">Choose a service</option>
+<option>Website Setup</option>
+<option>Social Media Setup</option>
+<option>Digital Product Setup</option>
+<option>AI Workflow Setup</option>
+<option>Beginner Business Setup</option>
+<option>Something else</option>
+</select>
+</label>
+
+<label>Tell us what you need
+<textarea name="Project Details" placeholder="What are you trying to build? What would you like help with?" required></textarea>
+</label>
+
+<button type="submit">Send Service Request →</button>
+<p class="note">Your email app may open to send the completed request.</p>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<strong>StartScale</strong><br><br>
+Learn. Build. Scale.<br><br>
+© 2026 StartScale. All rights reserved.
+</footer>
+
+</body>
+</html>
