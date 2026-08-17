@@ -3,314 +3,422 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>StartScale — Learn. Build. Scale.</title>
 
-<meta name="description"
-content="StartScale helps beginners learn practical online skills through simple guides, digital products, templates, and services.">
+<meta name="description" content="StartScale helps beginners learn how to build something online through practical guides, digital products, templates, and services.">
 
 <style>
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f7f7f5;
-    color: #111114;
-    line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f5;
+  color: #101114;
+  line-height: 1.6;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
+/* NAVIGATION */
+
 nav {
-    height: 82px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 6%;
-    background: rgba(247,247,245,.95);
-    border-bottom: 1px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  height: 78px;
+  background: rgba(247,247,245,0.96);
+  border-bottom: 1px solid #dddddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
 }
 
 .logo {
-    font-size: 25px;
-    font-weight: 900;
-    letter-spacing: -1px;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 30px;
-    font-weight: 600;
+.navlinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
-.nav-links a:hover {
-    opacity: .55;
+.navlinks a {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555;
 }
 
-.shop-button {
-    background: #111114;
-    color: white;
-    padding: 13px 25px;
-    border-radius: 30px;
-    font-weight: 700;
+.navlinks a:hover {
+  color: #000;
 }
+
+.nav-button {
+  background: #101114;
+  color: white !important;
+  padding: 12px 22px;
+  border-radius: 30px;
+}
+
+/* HERO */
 
 .hero {
-    max-width: 1200px;
-    margin: auto;
-    padding: 120px 6% 100px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 110px 6% 100px;
 }
 
 .eyebrow {
-    color: #777;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
+  color: #777;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 28px;
 }
 
 h1 {
-    font-size: clamp(55px, 10vw, 110px);
-    line-height: .95;
-    letter-spacing: -6px;
-    max-width: 850px;
+  font-size: clamp(58px, 10vw, 115px);
+  line-height: 0.9;
+  letter-spacing: -6px;
+  max-width: 900px;
+  margin-bottom: 40px;
 }
 
-.hero p {
-    margin-top: 35px;
-    max-width: 750px;
-    font-size: 21px;
-    color: #666a73;
+.hero-text {
+  max-width: 750px;
+  font-size: 22px;
+  color: #666a73;
+  margin-bottom: 40px;
 }
 
 .buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 40px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .button {
-    display: inline-block;
-    padding: 17px 30px;
-    border-radius: 16px;
-    font-weight: 800;
-    font-size: 17px;
-    transition: .2s;
+  display: inline-block;
+  padding: 17px 30px;
+  border-radius: 18px;
+  font-weight: 800;
+  font-size: 16px;
+  border: 1px solid #111;
+  transition: 0.2s;
 }
 
 .button:hover {
-    transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
-.button-black {
-    background: #111114;
-    color: white;
+.button-dark {
+  background: #101114;
+  color: white;
 }
 
-.button-white {
-    background: white;
-    border: 2px solid #111114;
+.button-light {
+  background: white;
+  color: #101114;
 }
+
+/* SECTIONS */
 
 section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 90px 6%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 90px 6%;
 }
 
 .section-label {
-    color: #777;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 4px;
-    text-transform: uppercase;
+  color: #777;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
 }
 
 .section-title {
-    font-size: clamp(40px, 7vw, 72px);
-    line-height: 1;
-    letter-spacing: -3px;
-    margin-top: 20px;
+  font-size: clamp(45px, 7vw, 75px);
+  letter-spacing: -4px;
+  line-height: 1;
+  margin-bottom: 20px;
 }
 
 .section-description {
-    max-width: 700px;
-    color: #666a73;
-    font-size: 19px;
-    margin-top: 20px;
+  color: #666a73;
+  font-size: 19px;
+  max-width: 700px;
+  margin-bottom: 50px;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-    margin-top: 50px;
+/* LEARNING CARDS */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
 }
 
 .card {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 30px;
-    padding: 38px;
-    min-height: 330px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 28px;
+  padding: 38px;
+  transition: 0.2s;
 }
 
-.card-tag {
-    color: #777;
-    font-weight: 800;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.tag {
+  display: inline-block;
+  background: #eeeeeb;
+  padding: 7px 14px;
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #666;
+  margin-bottom: 25px;
 }
 
 .card h3 {
-    font-size: 32px;
-    line-height: 1.1;
-    margin: 20px 0;
-    letter-spacing: -1px;
+  font-size: 30px;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
 }
 
 .card p {
-    color: #666a73;
-    font-size: 17px;
+  color: #666a73;
+  font-size: 17px;
+  margin-bottom: 28px;
+}
+
+.card-link {
+  font-weight: 800;
+}
+
+/* PRODUCTS */
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.product {
+  background: #101114;
+  color: white;
+  border-radius: 28px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  min-height: 360px;
+}
+
+.product .tag {
+  background: #27282c;
+  color: #ddd;
+  width: fit-content;
+}
+
+.product h3 {
+  font-size: 31px;
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.product p {
+  color: #b9bbc0;
+  font-size: 16px;
+  flex: 1;
 }
 
 .price {
-    font-size: 24px;
-    font-weight: 900;
-    margin-top: 20px;
+  font-size: 25px;
+  font-weight: 800;
+  margin: 20px 0;
 }
 
-.card-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 25px;
+/* BUY NOW */
+
+.buy {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: white;
+  color: #101114;
+  padding: 15px 20px;
+  border-radius: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
-.small-button {
-    display: inline-block;
-    padding: 13px 20px;
-    border-radius: 12px;
-    font-weight: 800;
-    background: #111114;
-    color: white;
+.buy:hover {
+  background: #e9e9e7;
+  transform: translateY(-2px);
 }
 
-.service {
-    background: #111114;
-    color: white;
-    border-radius: 35px;
-    padding: 70px 50px;
-    margin-top: 50px;
+/* SERVICES */
+
+.service-box {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  padding: 50px;
 }
 
-.service p {
-    color: #bbb;
-    max-width: 700px;
-    font-size: 18px;
-    margin-top: 20px;
+.service-box h3 {
+  font-size: 38px;
+  margin-bottom: 15px;
 }
 
-.service .button {
-    margin-top: 30px;
-    background: white;
-    color: #111114;
+.service-box p {
+  max-width: 700px;
+  color: #666a73;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
-.steps {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
-    margin-top: 45px;
+/* ABOUT / CTA */
+
+.cta {
+  background: #101114;
+  color: white;
+  border-radius: 35px;
+  padding: 70px 50px;
+  margin-top: 40px;
 }
 
-.step {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 25px;
-    padding: 30px;
+.cta h2 {
+  font-size: clamp(45px, 7vw, 75px);
+  letter-spacing: -4px;
+  line-height: 1;
+  margin-bottom: 25px;
 }
 
-.step-number {
-    font-size: 14px;
-    color: #777;
-    font-weight: 800;
+.cta p {
+  color: #b9bbc0;
+  max-width: 650px;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
-.step h3 {
-    margin-top: 15px;
-    font-size: 25px;
+.cta .button {
+  border-color: white;
 }
 
-.step p {
-    margin-top: 10px;
-    color: #666a73;
-}
+/* FOOTER */
 
 footer {
-    border-top: 1px solid #ddd;
-    padding: 50px 6%;
-    margin-top: 50px;
+  margin-top: 70px;
+  border-top: 1px solid #ddd;
+  padding: 50px 6%;
 }
 
 .footer-inner {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.footer-text {
+  color: #777;
+  max-width: 450px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #666;
+  font-weight: 600;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+
+  nav {
+    padding: 0 5%;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 80px;
+  }
+
+  h1 {
+    font-size: 64px;
+    letter-spacing: -4px;
+  }
+
+  .hero-text {
+    font-size: 19px;
+  }
+
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .grid,
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .card,
+  .product {
+    padding: 30px;
+  }
+
+  .service-box {
+    padding: 30px;
+  }
+
+  .cta {
+    padding: 50px 30px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+  }
+
+  .footer-links {
     flex-wrap: wrap;
-}
-
-footer p {
-    color: #777;
-}
-
-@media(max-width: 750px) {
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding-top: 80px;
-    }
-
-    h1 {
-        letter-spacing: -3px;
-    }
-
-    .products {
-        grid-template-columns: 1fr;
-    }
-
-    .steps {
-        grid-template-columns: 1fr;
-    }
-
-    .service {
-        padding: 45px 30px;
-    }
+  }
 }
 
 </style>
@@ -318,503 +426,545 @@ footer p {
 
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
 
-<div class="logo">
-StartScale
-</div>
+  <a href="index.html" class="logo">
+    StartScale
+  </a>
 
-<div class="nav-links">
-<a href="#learn">Learn</a>
-<a href="#products">Products</a>
-<a href="#services">Services</a>
-<a href="#about">About</a>
-</div>
+  <div class="navlinks">
 
-<a class="shop-button" href="#products">
-Shop
-</a>
+    <a href="#learn">
+      Learn
+    </a>
+
+    <a href="#products">
+      Products
+    </a>
+
+    <a href="#services">
+      Services
+    </a>
+
+    <a href="#about">
+      About
+    </a>
+
+    <a href="#products" class="nav-button">
+      Shop
+    </a>
+
+  </div>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
-<div class="eyebrow">
-Beginner-friendly • Practical • No fluff
-</div>
+  <div class="eyebrow">
+    BEGINNER-FRIENDLY • PRACTICAL • NO FLUFF
+  </div>
 
-<h1>
-Learn.<br>
-Build.<br>
-Scale.
-</h1>
+  <h1>
+    Learn.<br>
+    Build.<br>
+    Scale.
+  </h1>
 
-<p>
-StartScale helps beginners figure out how to build something online through simple guides, useful digital products, templates, and practical services.
-</p>
+  <p class="hero-text">
+    StartScale helps beginners learn how to build something
+    online through simple guides, useful digital products,
+    templates, and practical services.
+  </p>
 
-<div class="buttons">
+  <div class="buttons">
 
-<a class="button button-black"
-href="#products">
-Browse Products →
-</a>
+    <a href="#learn" class="button button-dark">
+      Start Learning
+    </a>
 
-<a class="button button-white"
-href="#services">
-Explore Services
-</a>
+    <a href="#products" class="button button-light">
+      Browse Products
+    </a>
 
-</div>
+  </div>
 
 </header>
 
 
-<!-- LEARN -->
+<!-- =========================
+     LEARN
+========================= -->
 
 <section id="learn">
 
-<div class="section-label">
-Learn
-</div>
+  <div class="section-label">
+    LEARN
+  </div>
 
-<h2 class="section-title">
-How-to guides
-</h2>
+  <h2 class="section-title">
+    How-to guides
+  </h2>
 
-<p class="section-description">
-Short, practical resources that turn “I don't know how” into clear next steps.
-</p>
+  <p class="section-description">
+    Short, practical resources that turn
+    "I don't know how" into clear next steps.
+  </p>
 
-<div class="products">
-
-<div class="card">
-
-<div>
-
-<div class="card-tag">
-Guide
-</div>
-
-<h3>
-Beginner Business Guide
-</h3>
-
-<p>
-A beginner-friendly guide for understanding how to turn a skill or idea into a simple online business.
-</p>
-
-</div>
-
-<div class="card-buttons">
-
-<a class="small-button"
-href="#products">
-View Guide
-</a>
-
-</div>
-
-</div>
+  <div class="grid">
 
 
-<div class="card">
+    <article class="card">
 
-<div>
+      <span class="tag">
+        BUSINESS
+      </span>
 
-<div class="card-tag">
-Guide
-</div>
+      <h3>
+        Online Business Basics
+      </h3>
 
-<h3>
-Online Business Starter Guide
-</h3>
+      <p>
+        Learn the basic steps for choosing an idea,
+        creating an offer, and getting your first customers.
+      </p>
 
-<p>
-A practical starting point for choosing an idea, creating an offer, finding customers, and getting your first steps organized.
-</p>
+      <a href="#products" class="card-link">
+        Explore resources →
+      </a>
 
-</div>
+    </article>
 
-<div class="card-buttons">
 
-<a class="small-button"
-href="#products">
-View Guide
-</a>
+    <article class="card">
 
-</div>
+      <span class="tag">
+        AI
+      </span>
 
-</div>
+      <h3>
+        Getting Started With AI
+      </h3>
 
-</div>
+      <p>
+        Practical ways beginners can use AI for planning,
+        writing, research, organization, and everyday work.
+      </p>
+
+      <a href="#products" class="card-link">
+        View toolkit →
+      </a>
+
+    </article>
+
+
+    <article class="card">
+
+      <span class="tag">
+        CONTENT
+      </span>
+
+      <h3>
+        Content Planning
+      </h3>
+
+      <p>
+        Build a simple content system without constantly
+        wondering what to post next.
+      </p>
+
+      <a href="#products" class="card-link">
+        Get the toolkit →
+      </a>
+
+    </article>
+
+
+    <article class="card">
+
+      <span class="tag">
+        SERVICES
+      </span>
+
+      <h3>
+        Creating Your First Service
+      </h3>
+
+      <p>
+        Learn how to turn a skill into a simple service
+        that you can present to potential customers.
+      </p>
+
+      <a href="#services" class="card-link">
+        Explore services →
+      </a>
+
+    </article>
+
+  </div>
 
 </section>
 
 
-<!-- PRODUCTS -->
+<!-- =========================
+     PRODUCTS
+========================= -->
 
 <section id="products">
 
-<div class="section-label">
-Digital Products
-</div>
+  <div class="section-label">
+    DIGITAL PRODUCTS
+  </div>
 
-<h2 class="section-title">
-Build faster.
-</h2>
+  <h2 class="section-title">
+    Tools to help you start.
+  </h2>
 
-<p class="section-description">
-Ready-to-use resources designed to save beginners time and make starting easier.
-</p>
+  <p class="section-description">
+    Simple downloadable resources designed to help
+    beginners move from ideas to action.
+  </p>
 
 
-<div class="products">
+  <div class="products">
 
 
-<!-- PRODUCT 1 -->
+    <!-- =====================
+         PRODUCT 1
+         AI BEGINNER TOOLKIT
+    ====================== -->
 
-<div class="card">
+    <article class="product">
 
-<div>
+      <span class="tag">
+        AI • TOOLKIT
+      </span>
 
-<div class="card-tag">
-Prompt Pack
-</div>
+      <h3>
+        AI Beginner Toolkit
+      </h3>
 
-<h3>
-AI Beginner Toolkit
-</h3>
+      <p>
+        Useful beginner prompts for planning, writing,
+        research, content, organization, and everyday
+        online work.
+      </p>
 
-<p>
-Useful AI prompts for planning, writing, research, content, productivity, business, and everyday online work.
-</p>
+      <div class="price">
+        $9.99
+      </div>
 
-<div class="price">
-$9.99
-</div>
+      <a
+        href="https://payhip.com/b/1MWhp"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="buy">
+        Buy Now →
+      </a>
 
-</div>
+    </article>
 
-<div class="card-buttons">
 
-<!-- REAL PAYHIP URL -->
+    <!-- =====================
+         PRODUCT 2
+         SERVICE OFFER
+    ====================== -->
 
-<a
-class="small-button"
-href="https://payhip.com/b/1MWhp"
-target="_blank"
-rel="noopener">
-Buy Now →
-</a>
+    <article class="product">
 
-</div>
+      <span class="tag">
+        TEMPLATE
+      </span>
 
-</div>
+      <h3>
+        Service Offer Template
+      </h3>
 
+      <p>
+        A simple template for creating and presenting
+        your first service clearly and professionally.
+      </p>
 
-<!-- PRODUCT 2 -->
+      <div class="price">
+        $4.99
+      </div>
 
-<div class="card">
+      <a
+        href="https://payhip.com/b/3IHOA"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="buy">
+        Buy Now →
+      </a>
 
-<div>
+    </article>
 
-<div class="card-tag">
-Template
-</div>
 
-<h3>
-Service Offer Template
-</h3>
+    <!-- =====================
+         PRODUCT 3
+         CONTENT PLANNING
+    ====================== -->
 
-<p>
-A simple template for creating, packaging, and presenting your first service.
-</p>
+    <article class="product">
 
-<div class="price">
-$4.99
-</div>
+      <span class="tag">
+        CONTENT
+      </span>
 
-</div>
+      <h3>
+        Content Planning Toolkit
+      </h3>
 
-<div class="card-buttons">
+      <p>
+        Organize your content ideas and create a simple
+        system for planning what to publish.
+      </p>
 
-<!-- REPLACE WITH YOUR REAL PAYHIP URL -->
+      <div class="price">
+        $6.99
+      </div>
 
-<a
-class="small-button"
-href="YOUR_PAYHIP_SERVICE_TEMPLATE_URL"
-target="_blank"
-rel="noopener">
-Buy Now →
-</a>
+      <a
+        href="https://payhip.com/b/LsUxI"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="buy">
+        Buy Now →
+      </a>
 
-</div>
+    </article>
 
-</div>
 
+    <!-- =====================
+         PRODUCT 4
+         SERVICE STARTER PACK
+    ====================== -->
 
-<!-- PRODUCT 3 -->
+    <article class="product">
 
-<div class="card">
+      <span class="tag">
+        SERVICES
+      </span>
 
-<div>
+      <h3>
+        Service Starter Pack
+      </h3>
 
-<div class="card-tag">
-Toolkit
-</div>
+      <p>
+        A beginner-friendly collection of resources
+        for turning a skill into a simple service offer.
+      </p>
 
-<h3>
-Content Planning Toolkit
-</h3>
+      <div class="price">
+        $7.99
+      </div>
 
-<p>
-Plan content ideas, hooks, captions, and simple weekly posting schedules without starting from scratch.
-</p>
+      <a
+        href="https://payhip.com/b/slpbZ"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="buy">
+        Buy Now →
+      </a>
 
-<div class="price">
-$6.99
-</div>
+    </article>
 
-</div>
 
-<div class="card-buttons">
+    <!-- =====================
+         PRODUCT 5
+         ONLINE BUSINESS STARTER
+    ====================== -->
 
-<!-- REPLACE WITH YOUR REAL PAYHIP URL -->
+    <article class="product">
 
-<a
-class="small-button"
-href="YOUR_PAYHIP_CONTENT_TOOLKIT_URL"
-target="_blank"
-rel="noopener">
-Buy Now →
-</a>
+      <span class="tag">
+        BUSINESS
+      </span>
 
-</div>
+      <h3>
+        Online Business Starter Pack
+      </h3>
 
-</div>
+      <p>
+        A practical starting point for beginners who
+        want to understand the basic pieces of an
+        online business.
+      </p>
 
+      <div class="price">
+        $7.99
+      </div>
 
-<!-- PRODUCT 4 -->
+      <a
+        href="https://payhip.com/b/Bctbu"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="buy">
+        Buy Now →
+      </a>
 
-<div class="card">
+    </article>
 
-<div>
 
-<div class="card-tag">
-Starter Pack
-</div>
-
-<h3>
-Service Starter Pack
-</h3>
-
-<p>
-A beginner resource for choosing a service, creating an offer, preparing your workflow, and finding potential customers.
-</p>
-
-<div class="price">
-$7.99
-</div>
-
-</div>
-
-<div class="card-buttons">
-
-<!-- REPLACE WITH YOUR REAL PAYHIP URL -->
-
-<a
-class="small-button"
-href="YOUR_PAYHIP_SERVICE_STARTER_URL"
-target="_blank"
-rel="noopener">
-Buy Now →
-</a>
-
-</div>
-
-</div>
-
-
-<!-- PRODUCT 5 -->
-
-<div class="card">
-
-<div>
-
-<div class="card-tag">
-Guide
-</div>
-
-<h3>
-Beginner Business Guide
-</h3>
-
-<p>
-A practical PDF covering ideas, offers, customers, pricing, and first steps for starting a simple online business.
-</p>
-
-<div class="price">
-$7.99
-</div>
-
-</div>
-
-<div class="card-buttons">
-
-<!-- REPLACE WITH YOUR REAL PAYHIP URL -->
-
-<a
-class="small-button"
-href="YOUR_PAYHIP_BUSINESS_GUIDE_URL"
-target="_blank"
-rel="noopener">
-Buy Now →
-</a>
-
-</div>
-
-</div>
-
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- SERVICES -->
+<!-- =========================
+     SERVICES
+========================= -->
 
 <section id="services">
 
-<div class="section-label">
-Services
-</div>
+  <div class="section-label">
+    SERVICES
+  </div>
 
-<h2 class="section-title">
-Need help building it?
-</h2>
+  <h2 class="section-title">
+    Need something done?
+  </h2>
 
-<p class="section-description">
-Practical services for people who want help getting an online project organized and ready to launch.
-</p>
+  <p class="section-description">
+    Practical services for people who want help
+    instead of trying to figure everything out alone.
+  </p>
 
 
-<div class="service">
+  <div class="service-box">
 
-<div class="section-label" style="color:#999;">
-StartScale Service
-</div>
+    <span class="tag">
+      STARTSCALE SERVICES
+    </span>
 
-<h2 style="font-size:45px; margin-top:15px;">
-Beginner Website Setup
-</h2>
+    <h3>
+      Simple online support.
+    </h3>
 
-<p>
-Need a simple website but don't know where to start? Get help organizing your pages, basic content, product links, and calls-to-action.
-</p>
+    <p>
+      StartScale offers beginner-friendly help with
+      digital organization, content planning, simple
+      online setup, research, and other practical tasks.
+    </p>
 
-<a
-class="button"
-href="mailto:ashieelgs@gmail.com?subject=StartScale%20Website%20Service">
-Request Service →
-</a>
+    <div class="buttons">
 
-</div>
+      <a
+        href="mailto:ashieelgs@gmail.com"
+        class="button button-dark">
+        Request a Service
+      </a>
+
+      <a
+        href="#products"
+        class="button button-light">
+        View Products
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- HOW IT WORKS -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
-<div class="section-label">
-How it works
-</div>
+  <div class="section-label">
+    ABOUT STARTSCALE
+  </div>
 
-<h2 class="section-title">
-Simple steps.
-</h2>
+  <h2 class="section-title">
+    No complicated stuff.
+  </h2>
 
-<div class="steps">
-
-<div class="step">
-
-<div class="step-number">
-01
-</div>
-
-<h3>
-Choose
-</h3>
-
-<p>
-Pick the guide, toolkit, template, or service that fits what you're trying to accomplish.
-</p>
-
-</div>
+  <p class="section-description">
+    StartScale is built around one simple idea:
+    make useful online knowledge easier for beginners
+    to understand and actually use.
+  </p>
 
 
-<div class="step">
+  <div class="cta">
 
-<div class="step-number">
-02
-</div>
+    <h2>
+      Start small.
+    </h2>
 
-<h3>
-Use
-</h3>
+    <p>
+      Pick one resource, learn one useful skill,
+      and take the next step.
+    </p>
 
-<p>
-Download your resource or start your service. Follow the instructions and put the material into action.
-</p>
+    <a
+      href="#products"
+      class="button button-light">
+      Browse Products →
+    </a>
 
-</div>
-
-
-<div class="step">
-
-<div class="step-number">
-03
-</div>
-
-<h3>
-Build
-</h3>
-
-<p>
-Use what you learn to create something real and keep improving it over time.
-</p>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
+<!-- =========================
+     FOOTER
+========================= -->
+
 <footer>
 
-<div class="footer-inner">
+  <div class="footer-inner">
 
-<div>
-<strong>StartScale</strong>
-<p>Learn. Build. Scale.</p>
-</div>
+    <div>
 
-<div>
-<p>Questions?</p>
-<a href="mailto:ashieelgs@gmail.com">
-ashieelgs@gmail.com
-</a>
-</div>
+      <div class="footer-logo">
+        StartScale
+      </div>
 
-</div>
+      <p class="footer-text">
+        Learn it. Build it. Scale it.
+      </p>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="#learn">
+        Learn
+      </a>
+
+      <a href="#products">
+        Products
+      </a>
+
+      <a href="#services">
+        Services
+      </a>
+
+      <a href="mailto:ashieelgs@gmail.com">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
 
 </footer>
+
 
 </body>
 </html>
